@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>โบสถ์ฮาเกีย โซเฟีย</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #333;
+    }
+
+    .navbar {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 40px 20px;
+    }
+
+    .button {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      padding: 15px 40px;
+      margin: 15px;
+      border: 2px solid #fff;
+      border-radius: 12px;
+      font-size: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      backdrop-filter: blur(5px);
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background: rgba(255, 255, 255, 0.4);
+      transform: scale(1.05);
+    }
+
+    .section {
+      display: none;
+      max-width: 900px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      margin: 20px auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      color: #2575fc;
+    }
+
+    .section p {
+      font-size: 18px;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .timeline-entry {
+      background: #fff;
+      padding: 15px;
+      margin: 10px 0;
+      border-left: 5px solid #2575fc;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .timeline-entry h3 {
+      margin: 0;
+      color: #2575fc;
+    }
+
+    .back-button {
+      display: block;
+      margin: 20px auto 0;
+      padding: 10px 30px;
+      background: #2575fc;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .back-button:hover {
+      background: #1a4fbf;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">โบสถ์ฮาเกีย โซเฟีย</div>
+
+  <div class="content">
+    <button class="button" onclick="showSection('members')">รายชื่อสมาชิก</button>
+    <button class="button" onclick="showSection('history')">ประวัติ</button>
+    <button class="button" onclick="showSection('timeline')">ไทม์ไลน์</button>
+  </div>
+
+  <div id="members" class="section">
+    <h2>รายชื่อสมาชิก</h2>
+    <p>นางสาวธนัชชา นิลกระจ่าง ม.5 เลขที่ 2</p>
+    <p>นายญาณวุฒิ สมอินทร์ ม.5 เลขที่ 9</p>
+    <p>นายนราวิชญ์ งามประกอบ ม.5 เลขที่ 22</p>
+    <button class="back-button" onclick="goBack()">ย้อนกลับ</button>
+  </div>
+
+  <div id="history" class="section">
+    <h2>ประวัติ</h2>
+    <p>โบสถ์ฮาเกีย โซเฟีย สร้างขึ้นในปี ค.ศ. 537 ที่เมืองคอนสแตนติโนเปิล โดยจักรพรรดิยูสตินีอุสที่ 1  
+    เดิมใช้เป็นโบสถ์คริสต์ ต่อมาเปลี่ยนเป็นมัสยิด และปัจจุบันเป็นพิพิธภัณฑ์และมัสยิด  
+    โบสถ์นี้ถือเป็นหนึ่งในสิ่งก่อสร้างที่ยิ่งใหญ่ที่สุดของศิลปะไบแซนไทน์</p>
+    <button class="back-button" onclick="goBack()">ย้อนกลับ</button>
+  </div>
+
+  <div id="timeline" class="section">
+    <h2>ไทม์ไลน์โบสถ์ฮาเกีย โซเฟีย</h2>
+
+    <div class="timeline-entry">
+      <h3>🏛️ ค.ศ. 537 - 1204</h3>
+      <p>สร้างเสร็จในยุคไบแซนไทน์ โดยจักรพรรดิ Justinian I<br>→ ใช้เป็น โบสถ์คริสต์ออร์โธดอกซ์</p>
+    </div>
+
+    <div class="timeline-entry">
+      <h3>🛐 ค.ศ. 1204 - 1261</h3>
+      <p>ถูกพวกครูเสดยึด เปลี่ยนเป็นโบสถ์คาทอลิกชั่วคราว</p>
+    </div>
+
+    <div class="timeline-entry">
+      <h3>🕌 ค.ศ. 1453 - 1935</h3>
+      <p>ออตโตมันยึดกรุง เปลี่ยนเป็น มัสยิด</p>
+    </div>
+
+    <div class="timeline-entry">
+      <h3>🏛️ ค.ศ. 1935 - 2020</h3>
+      <p>รัฐบาลตุรกีเปลี่ยนเป็น พิพิธภัณฑ์</p>
+    </div>
+
+    <div class="timeline-entry">
+      <h3>🕋 ค.ศ. 2020 - ปัจจุบัน</h3>
+      <p>เปลี่ยนสถานะอีกครั้ง กลับมาเป็น มัสยิด จนถึงปัจจุบัน</p>
+    </div>
+
+    <button class="back-button" onclick="goBack()">ย้อนกลับ</button>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(el => el.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function goBack() {
+      document.querySelectorAll('.section').forEach(el => el.style.display = 'none');
+    }
+  </script>
+
+</body>
+</html>
